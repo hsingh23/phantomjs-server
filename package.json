@@ -20,10 +20,16 @@
   "main": "lib",
   "dependencies": {
     "phantomjs": "2.x",
-    "when": "~2.7.1"
+    "when": "~2.7.1",
+    "snyk": "^1.189.0"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hsingh23/phantomjs-server/issues"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
